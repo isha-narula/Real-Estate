@@ -1,0 +1,315 @@
+#content-area {
+  overflow: auto;
+  min-height: 100%;
+  width: 100%;
+}
+
+#filter {
+  background: lightgrey;
+  width: 30%;
+  max-width: 300px;
+  float: left;
+  display: block;
+
+  .inside {
+    padding: 20px;
+    max-width: 300px;
+  }
+
+  h4 {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: 700px;
+  }
+
+  select {
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: darkgrey;
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+  }
+
+  .filters {
+    .title {
+      font-size: 0.9 rem;
+      display: block;
+      margin-bottom: 1 rem;
+      color: darkgrey;
+    }
+
+    input[type="text"] {
+      border-radius: 5px;
+      font-size: 1rem;
+      padding: 0.4 rem;
+      width: 45%;
+      display: inline-block;
+      margin-right: 2.5%;
+      margin-bottom: 1rem;
+    }
+    &.extras {
+      label {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+
+        input[type="checkbox"] {
+          float: right;
+        }
+      }
+    }
+  }
+}
+
+#listings {
+  width: 70%;
+  display: inline-block;
+  padding: 15px;
+  background: $offwhite;
+
+  .search-area {
+    input[type="text"] {
+      width: 70%;
+      background: transparent;
+      font-size: 2rem;
+      border: none;
+      border-bottom: 1px solid darkgrey;
+      margin: 20px;
+      color: darkgray;
+    }
+  }
+
+  .sortby-area {
+    margin-bottom: 20px;
+    .results {
+      font-size: 0.8rem;
+      color: lightgray;
+    }
+    .sort-options {
+      float: right;
+      select {
+        font-size: 0.9rem;
+        font-weight: 300;
+        border: 1px solid lightgrey;
+        background: transparent;
+        padding: 20px;
+        display: inline-block;
+        margin-right: 15px;
+        vertical-align: top;
+      }
+      .view {
+        display: inline-block;
+        .fa {
+          margin-right: 15px;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .listings-results {
+    margin-bottom: 80px;
+
+    .listing {
+      background: #ffffff;
+      border-radius: 5px;
+      -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    .listing-img {
+      color: white;
+      padding: 15px;
+      //background: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/brewster-mcleod-architects-1486154143.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*")
+      //no-repeat center center;
+      position: relative;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      min-height: 200px;
+      border-radius: 10px 10px 10px 10px;
+      -moz-border-radius: 10px 10px 10px 10px;
+      -webkit-border-radius: 10px 10px 10px 10px;
+      border: 0px solid #000000;
+
+      &:hover {
+        .details {
+          opacity: 1;
+        }
+        .address {
+          opacity: 0;
+        }
+      }
+
+      .address {
+        font-size: 1.3rem;
+        text-transform: capitalize;
+        position: absolute;
+        bottom: 20px;
+        opacity: 1;
+        text-shadow: 0px 1px 9px rgba(150, 150, 171, 1);
+      }
+
+      .details {
+        transition: all 0.6s ease-in-ease-out;
+        opacity: 0;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e570e7+0,c85ec7+47,a849a3+100;Pink+3D+%233 */
+        background: #e570e7; /* Old browsers */
+        background: -moz-linear-gradient(
+          top,
+          #e570e7 10%,
+          #c85ec7 7%,
+          #a849a3 0%
+        ); /* FF3.6-15 */
+        background: -webkit-linear-gradient(
+          top,
+          #e570e7 10%,
+          #c85ec7 7%,
+          #a849a3 0%
+        ); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(
+          to bottom,
+          #e570e7 0%,
+          #c85ec7 47%,
+          #a849a3 100%
+        ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e570e7', endColorstr='#a849a3',GradientType=0 ); /* IE6-9 */
+      }
+
+      .user-img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 2px solid white;
+        display: inline-block;
+      }
+
+      .user-details {
+        display: inline-block;
+        vertical-align: top;
+        width: 70%;
+        margin: left 20px;
+
+        .user-name {
+          display: block;
+          color: rgba(255, 255, 255, 1);
+          font-size: 0.9rem;
+          font-weight: 300;
+          margin-top: 3px;
+          margin-bottom: 5px;
+        }
+        .post-date {
+          font-size: 0.9rem;
+
+          display: block;
+          color: rgba(255, 255, 255, 7);
+        }
+      }
+
+      .listing-details {
+        margin-top: 20px;
+        margin-bottom: 10px;
+
+        .floor-space {
+          .fa {
+            display: inline-block;
+            font-size: 20px;
+            margin-right: 15px;
+          }
+          span {
+            font-weight: 300;
+            font-size: 0.8rem;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            top: 3px;
+          }
+
+          .floor-space {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .bottom-info {
+      padding: 20px 15px;
+      .price {
+        font-size: 1rem;
+        display: block;
+        margin-bottom: 10px;
+        color: darkgrey;
+      }
+      .location {
+        font-size: 1.2rem;
+        display: block;
+        color: lightgrey;
+      }
+    }
+  }
+}
+
+.view-btn {
+  background: black;
+  padding: 8px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 150px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+
+  &:hover {
+    background: pink;
+    cursor: pointer;
+  }
+}
+
+.pagination {
+  text-align: center;
+  .pages {
+    margin: 0 auto;
+    display: inline-block;
+    padding: 20px;
+    background: white;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    li {
+      padding: 10px 20px;
+      display: inline-block;
+
+      &.active,
+      &:hover {
+        color: white;
+        font-weight: 700;
+        background: pink;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.col-md-3 {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 20px 20px;
+}
+
+.col-md-9 {
+  width: 75%;
+  display: inline-block;
+}
